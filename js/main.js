@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             intro: 'VægtTracker',
-            barcode: '5704000501080',
+            barcode: '',
             ingrediens: null
             
         }
