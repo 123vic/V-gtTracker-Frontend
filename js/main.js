@@ -2,13 +2,14 @@ const app = Vue.createApp({
     data() {
         return {
             intro: 'VægtTracker',
-            
+            barcode: '',
+            ingrediens: null
             
         }
     },
     methods: {
-        myMethod(){
-    },
+        mymethod() {
+        },
     },
     computed: {
         myComputed() {

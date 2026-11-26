@@ -2,3 +2,24 @@ h1 {
     font-size: 50px;
     color: blue;
   }
+
+:root {
+  --olive: #88AD4D;
+  --card-green: #97D077;
+}
+
+.card-olive {
+  background-color: var(--card-green);
+  border: 2px solid #000;
+  border-radius: 12px;
+  color: #000;
+}
+
+.card-olive .card-subtitle {
+  color: #333 !important;
+}
+
+.card-olive .list-group-item {
+  background-color: transparent;
+  border-color: #000;
+}
