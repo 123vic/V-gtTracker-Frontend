@@ -15,6 +15,10 @@
   <div id="app">
     <div class="nav-bar"></div>
 
+      <h1>{{ intro }}</h1>
+
+      <Foodsearchbar @barcode="recieveBarcode"></Foodsearchbar>
+    </div>
     <h1>{{ intro }}</h1>
    
       <inhold :barcode="barcode"></inhold>
@@ -23,6 +27,7 @@
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
+    <script src="./components/Food_Searchbar.js"></script>
 
      <!-- Import Components -->
     <script src="./components/Inhold.js"></script>

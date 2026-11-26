@@ -3,11 +3,18 @@ const app = Vue.createApp({
         return {
             intro: 'VægtTracker',
             barcode: '',
-            ingrediens: null
+            
             
         }
     },
     methods: {
+        myMethod(){
+
+    },
+        recieveBarcode(barcodeId){
+        this.barcode = barcodeId
+        console.log(this.barcode)
+    }
         mymethod() {
         },
     },
