@@ -4,14 +4,14 @@ app.component('Foodsearchbar', {
   <div>
     
   <input v-model="searchterm" placeholder="indtast madvare">
-  <button @click ="GetFood">Hent mad</button>
+  <button @click ="GetFood">Hent barcode</button>
     
-</div>`,
+    </div>`,
    data(){
         return{
             foods:[],
             searchterm:'',
-            barcode:0
+            barcode:''
         }
     },
     methods: {
@@ -21,11 +21,10 @@ app.component('Foodsearchbar', {
             .then(response => {
                 console.log(response.status)
                 console.log(response.data)
-                this.barcode = response.data.barcodeid
+                this.barcode = response.data.barcodeId
                 searchterm=''
-                
-            }
-            )
+                this.$emit('barcode',this.barcode)   
+            })
         }
     }
 })
