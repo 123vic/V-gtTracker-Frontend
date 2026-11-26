@@ -25,6 +25,7 @@ app.component('Inhold', {
       axios.get(`http://localhost:5109/api/Ingrediens/barcode/${this.barcode}`)
         .then(response => {
           this.ingrediens = response.data
+          this.$emit('product-info', this.ingrediens)
         })
         .catch(error => {
           this.ingrediens = null
@@ -34,8 +35,9 @@ app.component('Inhold', {
             console.error('Ugyldig stregkode')
           } else {
             console.error('Failed to get ingrediens:', error)
-          }
+          } 
         })
+
     }
   },
   template:

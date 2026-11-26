@@ -3,8 +3,12 @@ const app = Vue.createApp({
         return {
             intro: 'VægtTracker',
             barcode: '',
-            weight: 0.0
-            
+            weight: 0.0,
+            calories: 0.0,
+            protein: 0.0,
+            fat: 0.0,
+            carbohydrate: 0.0,
+            productInfo: null
         }
     },
     methods: {
@@ -21,7 +25,17 @@ const app = Vue.createApp({
             console.log('Weight updated:', newWeight);
             // You can perform additional actions here, such as updating the UI or making API calls.
             this.weight = newWeight;
+        },
+        updateproductInfo(ingredient) {
+            console.log('Product info updated:', ingredient);
+            // You can perform additional actions here, such as updating the UI or making API calls.
+            this.productInfo = ingredient
+            this.calories = ingredient.calories
+            this.protein = ingredient.proteinPer100g
+            this.fat = ingredient.fedtPer100g
+            this.carbohydrate = ingredient.kulhydratPer100g
         }
+
     },
 
     computed: {
