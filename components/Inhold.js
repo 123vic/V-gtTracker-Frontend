@@ -41,15 +41,17 @@ app.component('Inhold', {
   template:
   /*html*/
   `
-  <div class="card w-75 mb-3" v-if="ingrediens">
+  <div class="card card-olive w-75 mb-3" v-if="ingrediens">
     <div class="card-body">
       <h4 class="card-title">{{ ingrediens.name }}</h4>
       <h6 class="card-subtitle mb-2 text-muted">{{ ingrediens.brand }}</h6>
-      <p class="card-text">{{ ingrediens.calories }} kcal pr. 100 g</p>
-      <p class="card-text">Protein: {{ ingrediens.proteinPer100g }} g</p>
-      <p class="card-text">Kulhydrat: {{ ingrediens.kulhydratPer100g }} g</p>
-      <p class="card-text">Fedt: {{ ingrediens.fedtPer100g }} g</p>
     </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ ingrediens.calories }} kcal pr. 100 g</li>
+      <li class="list-group-item">Protein: {{ ingrediens.proteinPer100g }} g</li>
+      <li class="list-group-item">Kulhydrat: {{ ingrediens.kulhydratPer100g }} g</li>
+      <li class="list-group-item">Fedt: {{ ingrediens.fedtPer100g }} g</li>
+    </ul>
   </div>
   `
 })
