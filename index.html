@@ -12,16 +12,20 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div id="app">
-      <div class="nav-bar"></div>
+  <div id="app">
+    <div class="nav-bar"></div>
 
-      <h1>{{ intro }}</h1>
-
-  
-    </div>
+    <h1>{{ intro }}</h1>
+   
+      <inhold :barcode="barcode"></inhold>
+       
+   </div>
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
+
+     <!-- Import Components -->
+    <script src="./components/Inhold.js"></script>
 
     <!-- Mount App -->
     <script>
