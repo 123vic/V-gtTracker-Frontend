@@ -19,7 +19,9 @@
 
       <Foodsearchbar @barcode="recieveBarcode"></Foodsearchbar>
       <inhold :barcode="barcode"></inhold>
-       
+      
+      <p>Current Weight: {{ weight }}</p>
+      <Weight @weight-updated="updateWeight"></Weight>
    </div>
 
     <!-- Import App -->
@@ -28,6 +30,7 @@
 
      <!-- Import Components -->
     <script src="./components/Inhold.js"></script>
+    <script src="./components/Weight.js"></script>
 
     <!-- Mount App -->
     <script>

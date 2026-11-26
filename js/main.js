@@ -3,7 +3,7 @@ const app = Vue.createApp({
         return {
             intro: 'VægtTracker',
             barcode: '',
-            
+            weight: 0.0
             
         }
     },
@@ -17,7 +17,13 @@ const app = Vue.createApp({
     },
         mymethod() {
         },
+        updateWeight(newWeight) {
+            console.log('Weight updated:', newWeight);
+            // You can perform additional actions here, such as updating the UI or making API calls.
+            this.weight = newWeight;
+        }
     },
+
     computed: {
         myComputed() {
             return ''
