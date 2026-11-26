@@ -14,7 +14,7 @@ const app = Vue.createApp({
         recieveBarcode(barcodeId){
         this.barcode = barcodeId
         console.log(this.barcode)
-    }
+    },
         mymethod() {
         },
     },
@@ -22,6 +22,7 @@ const app = Vue.createApp({
         myComputed() {
             return ''
         },
+
         
     }
 })
