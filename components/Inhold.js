@@ -3,6 +3,10 @@ app.component('Inhold', {
     barcode: {
       type: String,
       default: ''
+    },
+    grams: {
+      type: Number,
+      default: 0
     }
   },
   data() {
