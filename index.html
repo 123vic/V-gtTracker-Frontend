@@ -18,7 +18,7 @@
       <h1>{{ intro }}</h1>
 
       <Foodsearchbar @barcode="recieveBarcode"></Foodsearchbar>
-      <inhold v-if="barcode" :barcode="barcode" @product-info="updateproductInfo"></inhold>
+      
      <div class="row">
       <div class="col-md-4">
        <inhold v-if="barcode" :barcode="barcode" :grams="Number(weight)"
