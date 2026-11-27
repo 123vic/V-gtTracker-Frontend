@@ -18,11 +18,29 @@
       <h1>{{ intro }}</h1>
 
       <Foodsearchbar @barcode="recieveBarcode"></Foodsearchbar>
-      <inhold :barcode="barcode"></inhold>
-      
-      <p>Current Weight: {{ weight }}</p>
+      <inhold v-if="barcode" :barcode="barcode" @product-info="updateproductInfo"></inhold>
+      <p v-if="productInfo">Product Info: {{ productInfo.caloriesPer100g }} kcal</p>
+      <p>Current Weight: {{ weight }} g</p>
+      <p>Current Protein: {{ protein }}</p>
+      <p>Current Fat: {{ fat }}</p>
+      <p>Current Carbohydrate: {{ carbohydrate }}</p>
       <Weight @weight-updated="updateWeight"></Weight>
+
+       <calculator
+       v-if="productInfo"
+    :weight="weight"
+    :calories-per-100g="productInfo.caloriesPer100g"
+    :protein="protein"
+    :fat="fat"
+    :carbohydrate="carbohydrate"
+    @total-kcal-updated="updateTotalKcal"
+    @total-fat-updated="updateTotalFat"
+    @total-protein-updated="updateTotalProtein"
+    @total-carbohydrate-updated="updateTotalCarbohydrate">
+  </calculator>
+
    </div>
+
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
@@ -31,6 +49,7 @@
      <!-- Import Components -->
     <script src="./components/Inhold.js"></script>
     <script src="./components/Weight.js"></script>
+    <script src="./components/Calculator.js"></script>
 
     <!-- Mount App -->
     <script>
