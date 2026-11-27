@@ -8,7 +8,8 @@ const app = Vue.createApp({
             protein: 0.0,
             fat: 0.0,
             carbohydrate: 0.0,
-            productInfo: null
+            productInfo: null,
+            meal: []
         }
     },
     methods: {
@@ -34,6 +35,9 @@ const app = Vue.createApp({
             this.protein = ingredient.proteinPer100g
             this.fat = ingredient.fedtPer100g
             this.carbohydrate = ingredient.kulhydratPer100g
+        },
+        addToMeal(item) {
+            this.meal.push(item)
         }
 
     },

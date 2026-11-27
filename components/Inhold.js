@@ -36,8 +36,22 @@ app.component('Inhold', {
           } else {
             console.error('Failed to get ingrediens:', error)
           } 
+        });
+    },
+        
+    addToMeal() {
+      if (this.ingrediens && this.grams > 0) {
+        this.$emit('add-to-meal', {
+          name: this.ingrediens.name,
+          brand: this.ingrediens.brand,
+          barcodeId: this.ingrediens.barcodeId,
+          grams: this.grams,
+          caloriesPer100g: this.ingrediens.caloriesPer100g,
+          proteinPer100g: this.ingrediens.proteinPer100g,
+          kulhydratPer100g: this.ingrediens.kulhydratPer100g,
+          fedtPer100g: this.ingrediens.fedtPer100g
         })
-
+      }
     }
   },
   template:
@@ -54,6 +68,11 @@ app.component('Inhold', {
       <li class="list-group-item">Kulhydrat: {{ ingrediens.kulhydratPer100g }} g</li>
       <li class="list-group-item">Fedt: {{ ingrediens.fedtPer100g }} g</li>
     </ul>
+     <div class="card-body">
+      <button :disabled="grams <= 0" @click="addToMeal">
+        Tilføj til tallerken
+      </button>
+    </div>
   </div>
   `
 })
