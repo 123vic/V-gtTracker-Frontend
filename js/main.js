@@ -12,7 +12,8 @@ const app = Vue.createApp({
             totalKcal: 0.0,
             totalFat: 0.0,
             totalProtein: 0.0,
-            totalCarbohydrate: 0.0
+            totalCarbohydrate: 0.0,
+            meal: []
         }
     },
     methods: {
@@ -54,6 +55,9 @@ const app = Vue.createApp({
         updateTotalCarbohydrate(newTotalCarbohydrate) {
             console.log('Total Carbohydrate updated:', newTotalCarbohydrate);
             this.totalCarbohydrate = newTotalCarbohydrate;
+        },
+        addToMeal(item) {
+            this.meal.push(item)
         }
 
     },
