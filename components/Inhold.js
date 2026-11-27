@@ -44,7 +44,7 @@ app.component('Inhold', {
     },
         
     addToMeal() {
-      if (this.ingrediens && this.grams > 0) {
+      if (this.ingrediens) {
         this.$emit('add-to-meal', {
           name: this.ingrediens.name,
           brand: this.ingrediens.brand,
@@ -73,7 +73,7 @@ app.component('Inhold', {
       <li class="list-group-item">Fedt: {{ ingrediens.fedtPer100g }} g</li>
     </ul>
      <div class="card-body">
-      <button :disabled="grams <= 0" @click="addToMeal">
+      <button @click="addToMeal">
         Tilføj til tallerken
       </button>
     </div>
