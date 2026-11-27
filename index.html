@@ -29,7 +29,14 @@
        <calculator
        v-if="productInfo"
     :weight="weight"
-    :calories-per-100g="productInfo.caloriesPer100g">
+    :calories-per-100g="productInfo.caloriesPer100g"
+    :protein="protein"
+    :fat="fat"
+    :carbohydrate="carbohydrate"
+    @total-kcal-updated="updateTotalKcal"
+    @total-fat-updated="updateTotalFat"
+    @total-protein-updated="updateTotalProtein"
+    @total-carbohydrate-updated="updateTotalCarbohydrate">
   </calculator>
 
    </div>

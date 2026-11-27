@@ -8,7 +8,11 @@ const app = Vue.createApp({
             protein: 0.0,
             fat: 0.0,
             carbohydrate: 0.0,
-            productInfo: null
+            productInfo: null,
+            totalKcal: 0.0,
+            totalFat: 0.0,
+            totalProtein: 0.0,
+            totalCarbohydrate: 0.0
         }
     },
     methods: {
@@ -34,6 +38,22 @@ const app = Vue.createApp({
             this.protein = ingredient.proteinPer100g
             this.fat = ingredient.fedtPer100g
             this.carbohydrate = ingredient.kulhydratPer100g
+        },
+        updateTotalKcal(newTotalKcal) {
+            console.log('Total Kcal updated:', newTotalKcal);
+            this.totalKcal = newTotalKcal;
+        },
+        updateTotalFat(newTotalFat) {
+            console.log('Total Fat updated:', newTotalFat);
+            this.totalFat = newTotalFat;
+        },
+        updateTotalProtein(newTotalProtein) {
+            console.log('Total Protein updated:', newTotalProtein);
+            this.totalProtein = newTotalProtein;
+        },
+        updateTotalCarbohydrate(newTotalCarbohydrate) {
+            console.log('Total Carbohydrate updated:', newTotalCarbohydrate);
+            this.totalCarbohydrate = newTotalCarbohydrate;
         }
 
     },
