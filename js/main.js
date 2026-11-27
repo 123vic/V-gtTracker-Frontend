@@ -4,7 +4,7 @@ const app = Vue.createApp({
             intro: 'VægtTracker',
             barcode: '',
             weight: 0.0,
-            calories: 0.0,
+            caloriesPer100g: 0.0,
             protein: 0.0,
             fat: 0.0,
             carbohydrate: 0.0,

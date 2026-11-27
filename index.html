@@ -27,6 +27,11 @@
       <Weight @weight-updated="updateWeight"></Weight>
    </div>
 
+  <calculator
+    :weight="weight"
+    :calories-per-100g="selectedProduct.kcalPer100g">
+  </calculator>
+
     <!-- Import App -->
     <script src="./js/main.js"></script>
     <script src="./components/Food_Searchbar.js"></script>
@@ -34,6 +39,7 @@
      <!-- Import Components -->
     <script src="./components/Inhold.js"></script>
     <script src="./components/Weight.js"></script>
+    <script src="./components/Calculator.js"></script>
 
     <!-- Mount App -->
     <script>
