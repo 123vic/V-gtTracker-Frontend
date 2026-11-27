@@ -49,7 +49,7 @@ app.component('Inhold', {
       <h6 class="card-subtitle mb-2 text-muted">{{ ingrediens.brand }}</h6>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{ ingrediens.calories }} kcal pr. 100 g</li>
+      <li class="list-group-item">{{ ingrediens.caloriesPer100g }} kcal pr. 100 g</li>
       <li class="list-group-item">Protein: {{ ingrediens.proteinPer100g }} g</li>
       <li class="list-group-item">Kulhydrat: {{ ingrediens.kulhydratPer100g }} g</li>
       <li class="list-group-item">Fedt: {{ ingrediens.fedtPer100g }} g</li>

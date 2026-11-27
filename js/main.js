@@ -30,7 +30,7 @@ const app = Vue.createApp({
             console.log('Product info updated:', ingredient);
             // You can perform additional actions here, such as updating the UI or making API calls.
             this.productInfo = ingredient
-            this.calories = ingredient.calories
+            this.caloriesPer100g = ingredient.caloriesPer100g
             this.protein = ingredient.proteinPer100g
             this.fat = ingredient.fedtPer100g
             this.carbohydrate = ingredient.kulhydratPer100g

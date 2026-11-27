@@ -19,18 +19,21 @@
 
       <Foodsearchbar @barcode="recieveBarcode"></Foodsearchbar>
       <inhold v-if="barcode" :barcode="barcode" @product-info="updateproductInfo"></inhold>
-      <p v-if="productInfo">Product Info: {{ productInfo.calories }}</p>
-      <p>Current Weight: {{ weight }}</p>
+      <p v-if="productInfo">Product Info: {{ productInfo.caloriesPer100g }} kcal</p>
+      <p>Current Weight: {{ weight }} g</p>
       <p>Current Protein: {{ protein }}</p>
       <p>Current Fat: {{ fat }}</p>
       <p>Current Carbohydrate: {{ carbohydrate }}</p>
       <Weight @weight-updated="updateWeight"></Weight>
+
+       <calculator
+       v-if="productInfo"
+    :weight="weight"
+    :calories-per-100g="productInfo.caloriesPer100g">
+  </calculator>
+
    </div>
 
-  <calculator
-    :weight="weight"
-    :calories-per-100g="selectedProduct.kcalPer100g">
-  </calculator>
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
