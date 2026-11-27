@@ -6,13 +6,15 @@ app.component('Weight', {
   },
   methods: {
     getWeight() {
-        axios.get('http://localhost:5109/api/Weight')
+        axios.post('http://localhost:5109/api/Weight/save')
         .then(response => {
-            this.Weight = response.data;
+            this.Weight = response.data.gram;
             this.$emit('weight-updated', this.Weight);
         })
+        .catch(error => {
+            console.log(error);
+        });
     },
-
   },
   template:
   /*html*/
